@@ -14,30 +14,38 @@
    ```
 
 3. **Настройка DATABASE_URL и alembic.ini**  
-   В `app/config.py`
+   В `app/config.py` 
    заменить
+   ```
    `DATABASE_URL = "postgresql+asyncpg://postgres:myCotValerasiniy1007@localhost:5432/todo_db"`
+   ```
    на свой пароль
+   ```
    `DATABASE_URL = "postgresql+asyncpg://postgres:password@localhost:5432/name_of_file"`
+   ```
    В `alembic.ini`
    заменить
+   ```
    `sqlalchemy.url = postgresql+asyncpg://postgres:myCotValerasiniy1007@localhost:5432/todo_db`
+   ```
    на свой пароль
+   ```
    `sqlalchemy.url = postgresql+asyncpg://postgres:password@localhost:5432/name_of_file`
+   ```
 
 
 
-4. **Миграции БД**
+5. **Миграции БД**
    ```
    alembic upgrade head
    ```
 
-5. **Запуск**
+6. **Запуск**
    ```
    uvicorn app.main:app --reload
    ```
 
-6. **Swagger UI:** [http://localhost:8000/docs](http://localhost:8000/docs)
+7. **Swagger UI:** [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ## Тесты
 
